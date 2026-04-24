@@ -1,5 +1,5 @@
 {% set name = "IPTCInfo3" %}
-{% set version = "2.1.4" %}
+{% set version = "2.3.0" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e24f9ed345602425f6af37e4f9bbff6fec1e957081dd4fbc5af92a89f899c963
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | lower }}-{{ version }}.tar.gz
+  sha256: aee2ee68b6b77aa6e317eed956ff36affc7dfba033c95458026815fa41b4a5e6
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
